@@ -67,8 +67,8 @@ function chipClick(letter, state) {
     letters[letter] = state;
 }
 
-function generate() {
-    let filteredWords = words.filter(word => [...word].every(char => letters[char]));
+function generate(isFiveLetter) {
+    let filteredWords = words.filter(word => (isFiveLetter == (word.length == 5)) && [...word].every(char => letters[char]));
     shuffle(filteredWords);
     outputElement.innerText = filteredWords.slice(0, parseInt(wordcountInput.value, 10)).join(" ");
 }
