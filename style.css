@@ -1,0 +1,36 @@
+body {
+    background-color: #181818;
+}
+
+#chips {
+    display: flex;
+    gap: 10px;
+}
+
+.chip-input {
+    display: none; /* Hide the checkbox */
+}
+
+.chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #2e2e2e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.chip:hover {
+    transform: scale(1.05);
+}
+
+.chip-input:checked + .chip {
+    background-color: #4caf50; /* Change color when checked */
+}
+
+.chip-input:focus + .chip {
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.6); /* Focus effect */
+}
