@@ -57,7 +57,8 @@ body {
 
 .output {
     resize: none;
-    width: 60vw;
+    width: 80vw;
+    height: 50vh;
 }
 
 .input:focus {
