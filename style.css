@@ -1,9 +1,17 @@
 body {
     background-color: #181818;
+    margin: 0;
 }
 
 #chips {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 20%;
+    justify-content: center;
+    background-color: #202020;
+    padding: 1%;
+    overflow: hidden;
+    border-radius: 0 0 1vmax 1vmax;
     gap: 10px;
 }
 
@@ -11,24 +19,68 @@ body {
     display: none; /* Hide the checkbox */
 }
 
-.chip {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 50px;
+.button {
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.75rem;
+}
+
+.chip, .button {
     background-color: #2e2e2e;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.chip:hover {
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1vh;
+}
+
+#wordcount-label {
+    color: white;
+}
+
+.input, .output {
+    background: none;
+    border: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.input {
+    border-bottom: 1px solid #ffffff65;
+}
+
+.output {
+    resize: none;
+    width: 60vw;
+}
+
+.input:focus {
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+.output:focus {
+    outline: 1px solid white;
+}
+
+.chip {
+    padding: 0.1rem 1rem;
+    border-radius: 1rem;
+}
+
+.chip:hover, .button:hover {
     transform: scale(1.05);
 }
 
 .chip-input:checked + .chip {
-    background-color: #4caf50; /* Change color when checked */
+    background-color: #dbdbdb; /* Change color when checked */
+    color: #161616;
 }
 
 .chip-input:focus + .chip {
