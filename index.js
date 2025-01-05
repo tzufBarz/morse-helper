@@ -50,7 +50,8 @@ for (letter in letters) {
 
 window.addEventListener("beforeunload", updateCookie)
 window.addEventListener("keyup", e => {
-    document.getElementById(`chip-${e.key}`).click();
+    const chip = document.getElementById(`chip-${e.key.toUpperCase()}`);
+    if (chip) chip.click();
 })
 
 function shuffle(arr) {
